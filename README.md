@@ -15,22 +15,22 @@ You can connect to OMERO.server using the OMERO API in Python in the following w
 
 First pull the latest major versions of the containers:
 
-    docker-compose pull
+    docker compose pull
 
 Generate self-signed certificates (only needs to be run the first time):
 
-    docker-compose -f docker-compose.icessl.yml -f docker-compose.yml run icessl
+    docker compose -f docker-compose.icessl.yml -f docker-compose.yml run icessl
 
 Run OMERO:
 
-    docker-compose up -d
-    docker-compose logs -f
+    docker compose up -d
+    docker compose logs -f
 
 
 ## Basic tests
 
-    docker-compose -f docker-compose.test.yml -f docker-compose.yml build
-    docker-compose -f docker-compose.test.yml -f docker-compose.yml run test
+    docker compose -f docker-compose.test.yml -f docker-compose.yml build
+    docker compose -f docker-compose.test.yml -f docker-compose.yml run test
 
 
 ## SELinux
